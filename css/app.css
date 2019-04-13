@@ -1,0 +1,169 @@
+body {
+  background-image: url("https://media.giphy.com/media/dAQXfvgxl1YHUgzg4L/giphy.gif");
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: contain;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #696969;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  /* color: #a20508; */
+  background-image: url("Player-1.png");
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.healthbar {
+  width: 80%;
+  height: 40px;
+  background-color: #eee;
+  margin: auto;
+  transition: width 500ms;
+}
+
+.controls,
+.log {
+  margin-top: 30px;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 3px 6px #ccc;
+}
+
+.turn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.log ul {
+  list-style: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.log ul li {
+  margin: 5px;
+}
+
+.log ul .player-turn {
+  color: blue;
+  background-color: #e4e8ff;
+}
+
+.log ul .monster-turn {
+  color: red;
+  background-color: #ffc0c1;
+}
+
+button {
+  font-size: 20px;
+  background-color: #eee;
+  padding: 12px;
+  box-shadow: 0 1px 1px black;
+  margin: 10px;
+}
+
+#start-game {
+background-color: #d12eef;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 20px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+@-webkit-keyframes glowing {
+  0% { background-color: #d12eef; -webkit-box-shadow: 0 0 3px #d12eef; }
+  50% { background-color: #6f07ab; -webkit-box-shadow: 0 0 40px #6f07ab; }
+  100% { background-color: #d12eef; -webkit-box-shadow: 0 0 3px #d12eef; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #d12eef; -moz-box-shadow: 0 0 3px #d12eef; }
+  50% { background-color: #6f07ab; -moz-box-shadow: 0 0 40px #6f07ab; }
+  100% { background-color: #d12eef; -moz-box-shadow: 0 0 3px #d12eef; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #d12eef; box-shadow: 0 0 3px #d12eef; }
+  50% { background-color: #6f07ab; box-shadow: 0 0 40px #6f07ab; }
+  100% { background-color: #d12eef; box-shadow: 0 0 3px #d12eef; }
+}
+
+@keyframes glowing {
+  0% { background-color: #d12eef; box-shadow: 0 0 3px #d12eef; }
+  50% { background-color: #6f07ab; box-shadow: 0 0 40px #6f07ab; }
+  100% { background-color: #d12eef; box-shadow: 0 0 3px #d12eef; }
+}
+
+#start-game:hover {
+  background-color: #320894;
+  color: #eee;
+}
+
+#attack {
+  background-color: #ff7367;
+}
+
+#attack:hover {
+  background-color: #ff3f43;
+}
+
+#special-attack {
+  background-color: #ffaf4f;
+}
+
+#special-attack:hover {
+  background-color: #ff9a2b;
+}
+
+#heal {
+  background-color: #aaffb0;
+}
+
+#heal:hover {
+  background-color: #76ff7e;
+}
+
+#give-up {
+  background-color: #ffffff;
+}
+
+#give-up:hover {
+  background-color: #c7c7c7;
+}

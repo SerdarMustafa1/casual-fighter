@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Casual Fighter I</title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div class="background">
+        <img src="title.png" alt="Smiley face">
+<div id="app">
+    <section class="row">
+        <div class="small-6 columns">
+            <h1 class="text-center">Player 1</h1>
+            <div class="healthbar">
+                <div class="healthbar text-center" style="background-color: rgb(17, 31, 219); margin: 0; color: white;"
+                :style="{width: playerHealth + '%'}">
+{{ playerHealth}}
+                </div>
+            </div>
+        </div>
+        <div class="small-6 columns">
+            <h1 class="text-center">Akuma</h1>
+            <div class="healthbar">
+                <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;"
+                :style="{width: monsterHealth + '%'}">
+{{ monsterHealth}}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="row controls" v-if="!gameIsRunning">
+        <div class="small-12 columns">
+            <button id="start-game" @click="startGame">START NEW GAME</button>
+        </div>
+    </section>
+    <section class="row controls" v-else>
+        <div class="small-12 columns">
+            <button id="attack" @click="attack">ATTACK</button>
+            <button id="special-attack" @click="specialAttack">SPECIAL ATTACK</button>
+            <button id="heal" @click="heal">HEAL</button>
+            <button id="give-up" @click="giveUp">GIVE UP</button>
+        </div>
+    </section>
+    <section class="row log" v-if="turns.length > 0">
+        <div class="small-12 columns">
+            <ul>
+                <li v-for="turn in turns"
+                :class="{'player-turn': turn.isPlayer, 'monster-turn': !turn.isPlayer}">
+                    {{ turn.text }}
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+<div id="image" class="bg"></div>
+<script src="app.js"></script>
+<embed src="Ryu.mp3" width="180" height="90" loop="true" autostart="true" hidden="true" />
+
+</div>
+<footer class="footer">Created by Serdar Mustafa | 2019</footer>
+</body>
+</html>
