@@ -66,7 +66,7 @@ new Vue({
       return Math.max(Math.floor(Math.random() * max) + 1, min);
     },
     checkWin: function() {
-      if (this.AkumaHealth <= 0) {
+      if (this.monsterHealth <= 0) {
         if (confirm("You Were Victorious! New Game?")) {
           this.startGame();
         } else {
